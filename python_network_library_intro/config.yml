@@ -1,0 +1,18 @@
+enable
+conf t
+HOST S1
+enable password cisco
+!
+username aslan password cisco
+
+interface Vlan2
+ ip address 192.168.122.72 255.255.255.0
+ no shut
+!
+
+line vty 0 4
+ login local
+ transport input all
+!
+end
+wr
